@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.lien-ket {
+  color: black; /* Đặt màu chữ thành đen */
+}
+.carousel-inner{
+  border-radius: 20px;
+  height: 600px;
+}
+.row1{
+  height: 154px;
+}
+.row2{
+  height: 154px;
+}
+  .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .col{
+    background-color:#b9efef ;
+    border-radius: 30px;
+    margin-left: 5px;
+    height: 201px;
+    
+  }
+  
+  
+  .nav-item:hover a {
+    color: green; /* Đổi màu chữ khi hover vào liên kết */
+    text-decoration: underline; /* Thêm gạch chân khi hover vào liên kết */
+  }
+
+ 
