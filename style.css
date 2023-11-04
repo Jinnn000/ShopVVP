@@ -22,16 +22,9 @@
     background-color:#b9efef ;
     border-radius: 30px;
     margin-left: 5px;
-    height: 201px;
-    
+    height: 201px; 
   }
-  
   .nav-item:hover a {
     color: green; /* Đổi màu chữ khi hover vào liên kết */
     text-decoration: underline; /* Thêm gạch chân khi hover vào liên kết */
-
   }
-  /* .custom-icon{
-    font-size: 24px;
-    line-height: 52px;
-  } */
