@@ -1,19 +1,19 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .lien-ket {
-  color: black; /* Đặt màu chữ thành đen */
+color: black; /* Đặt màu chữ thành đen */
 }
 .carousel-inner{
-  border-radius: 20px;
-  height: 600px;
+border-radius: 20px;
+height: 600px;
 }
 .row1{
-  height: 154px;
+height: 154px;
 }
 .row2{
-  height: 154px;
+height: 154px;
 }
   .nav-item:hover .dropdown-menu {
     display: block;
