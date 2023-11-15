@@ -1,13 +1,17 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .lien-ket {
 color: black; /* Đặt màu chữ thành đen */
 }
+.carousel-item{
+  
+}
 .carousel-inner{
 border-radius: 20px;
-height: 600px;
+height: 700px;
 }
 .row1{
 height: 154px;
@@ -144,4 +148,7 @@ height: 154px;
   }
   .signup_link a:hover{
     text-decoration: underline;
+  }
+  .footer{
+    margin-top: 20px;
   }
