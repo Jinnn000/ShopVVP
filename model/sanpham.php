@@ -1,9 +1,9 @@
 <?php 
 
-function insert_sanpham($sp_id,$sp_ten,$sp_ncc,$sp_xx,$sp_m,$_cl,$sp_g,$sp_nn,$sp_anh,$dm_id){
+function insert_sanpham($sp_id,$sp_ten,$sp_ncc,$sp_xx,$sp_m,$_cl,$sp_g,$sp_km,$sp_nn,$sp_anh,$dm_id){
     $conn = pdo_get_connection();
                         $sql = "INSERT INTO sanpham(sanpham_id, sanpham_ten,sanpham_tenncc,sanpham_xuatxu,sanpham_mau
-                        ,sanpham_chatlieu,sanpham_anh,sanpham_gia,sanpham_ngaynhap,danhmuc_id) VALUES (?, ?,?,?,?,?,?,?,?,?)";
+                        ,sanpham_chatlieu,sanpham_anh,sanpham_gia,khuyenmai,sanpham_ngaynhap,danhmuc_id) VALUES (?, ?,?,?,?,?,?,?,?,?,?)";
                         // Thực hiện truy vấn bằng hàm pdo_execute
                         try {
                             $filename= $_FILES['sp_anh']['name'];
@@ -16,7 +16,7 @@ function insert_sanpham($sp_id,$sp_ten,$sp_ncc,$sp_xx,$sp_m,$_cl,$sp_g,$sp_nn,$s
                           }
                         // Gọi hàm để thiết lập kết nối   
                             $sp_nn_datetime = new DateTime($sp_nn);
-                            pdo_execute($sql, $sp_id,$sp_ten,$sp_ncc,$sp_xx,$sp_m,$_cl,$filename,$sp_g,$sp_nn_datetime->format('Y-m-d H:i:s'),$dm_id);
+                            pdo_execute($sql, $sp_id,$sp_ten,$sp_ncc,$sp_xx,$sp_m,$_cl,$filename,$sp_g,$sp_km,$sp_nn_datetime->format('Y-m-d H:i:s'),$dm_id);
                             echo "Thêm thành công!";
                             echo "<script>document.getElementById('sp_id').value = '';
                              document.getElementById('sp_ten').value = '';
@@ -25,6 +25,7 @@ function insert_sanpham($sp_id,$sp_ten,$sp_ncc,$sp_xx,$sp_m,$_cl,$sp_g,$sp_nn,$s
                              document.getElementById('sp_m').value = '';
                              document.getElementById('sp_cl').value = '';
                              document.getElementById('sp_g').value = '';
+                             document.getElementById('sp_km').value = '';
                              document.getElementById('sp_nn').value = '';
                              document.getElementById('sp_anh').value = '';
                              </script>";
@@ -75,7 +76,7 @@ function load_onesp( $sp_id ){
                 $dm= pdo_query_one($sql, $sp_id);
                 return $dm;
 }
-function update_sanpham($dm_id,$sp_id, $sp_ten, $sp_ncc, $sp_xx, $sp_m, $sp_cl, $sp_g, $sp_nn, $sp_anh)
+function update_sanpham($dm_id,$sp_id, $sp_ten, $sp_ncc, $sp_xx, $sp_m, $sp_cl, $sp_g,$sp_km, $sp_nn, $sp_anh)
 {
     $conn = pdo_get_connection();
 
@@ -88,10 +89,10 @@ function update_sanpham($dm_id,$sp_id, $sp_ten, $sp_ncc, $sp_xx, $sp_m, $sp_cl, 
             // Gọi hàm để thiết lập kết nối
             if ($filename != "") {
                 $sql = "UPDATE sanpham SET danhmuc_id='".$dm_id."',sanpham_ten='" . $sp_ten . "',sanpham_tenncc='" . $sp_ncc . "',sanpham_xuatxu='" . $sp_xx . "',sanpham_mau='" . $sp_m . "'
-                    ,sanpham_chatlieu='" . $sp_cl . "',sanpham_anh='" . $filename . "',,sanpham_ngaynhap='" . $sp_nn_datetime->format('Y-m-d H:i:s') . "' WHERE sanpham_id='" . $sp_id . "'";
+                    ,sanpham_chatlieu='" . $sp_cl . "',sanpham_gia='".$sp_g."',khuyenmai='".$sp_km."',sanpham_ngaynhap='" . $sp_nn_datetime->format('Y-m-d H:i:s') . "' WHERE sanpham_id='" . $sp_id . "'";
             } else {
                 $sql = "UPDATE sanpham SET danhmuc_id='".$dm_id."',sanpham_ten='" . $sp_ten . "',sanpham_tenncc='" . $sp_ncc . "',sanpham_xuatxu='" . $sp_xx . "',sanpham_mau='" . $sp_m . "'
-                    ,sanpham_chatlieu='" . $sp_cl . "',sanpham_gia='" . $sp_g . "',sanpham_ngaynhap='" . $sp_nn_datetime->format('Y-m-d H:i:s') . "' WHERE sanpham_id='" . $sp_id . "'";
+                    ,sanpham_chatlieu='" . $sp_cl . "',sanpham_gia='" . $sp_g . "',khuyenmai='" . $sp_km . "',sanpham_anh='" . $filename . "',sanpham_ngaynhap='" . $sp_nn_datetime->format('Y-m-d H:i:s') . "' WHERE sanpham_id='" . $sp_id . "'";
             }
 
             pdo_execute($sql);
@@ -103,6 +104,7 @@ function update_sanpham($dm_id,$sp_id, $sp_ten, $sp_ncc, $sp_xx, $sp_m, $sp_cl, 
                              document.getElementById('sp_m').value = '';
                              document.getElementById('sp_cl').value = '';
                              document.getElementById('sp_g').value = '';
+                             document.getElementById('sp_km').value = '';
                              document.getElementById('sp_nn').value = '';
                              </script>";
             header("Location: admin_index.php?act=listsp");

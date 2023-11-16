@@ -36,6 +36,9 @@
                 <input type="text" class="form-control" id="sp_g" placeholder="Giá" name="sp_g">
               </div>
               <div class="mb-3">
+                <input type="text" class="form-control" id="sp_km" placeholder="Khuyến mãi" name="sp_km">
+              </div>
+              <div class="mb-3">
                 <p>Ngày nhập</p>
                 <input type="datetime-local" class="form-control" id="sp_nn" placeholder="Ngày nhập" name="sp_nn" >
               </div>

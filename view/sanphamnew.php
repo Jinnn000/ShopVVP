@@ -6,11 +6,11 @@
     $listsp=load_newsanpham_home();
     ?>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/font/fontawesome-free-6.4.2-web/css/all.min.css">
-    <link rel="stylesheet" href="stylesp.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="view/stylesp.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'>
     
     <title>Document</title>
@@ -25,13 +25,14 @@
         <?php 
             foreach ($listsp as $sanpham) {
                 extract($sanpham);
-                $img = "../image/" . $sanpham_anh;
+                $img = "image/" . $sanpham_anh;
                   $hinh = "<img src='" . $img . "'>";
                   $formated= number_format($sanpham_gia,0,'.','.');
                 echo'<div class="col-md-6 col-lg-4 col-xl-3">
                 <div id="product-1" class="single-product"  >
-                        
+                
                         <div class="part-1" style="background: url('.$img.') no-repeat center; background-size:contain;">
+                        <span class="new">new</span>
                                 <ul>
                                         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#"><i class="fas fa-heart"></i></a></li>

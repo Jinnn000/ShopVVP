@@ -47,6 +47,9 @@
                 <input type="text" class="form-control" id="sp_g" placeholder="Giá" value="<?=$sanpham_gia?>" name="sp_g">
               </div>
               <div class="mb-3">
+                <input type="text" class="form-control" id="sp_km" placeholder="Khuyến mãi" value="<?=$khuyenmai?>" name="sp_km">
+              </div>
+              <div class="mb-3">
                 <p>Ngày nhập</p>
                 <input type="datetime-local" class="form-control" id="sp_nn" placeholder="Ngày nhập" value="<?=$sp_nn_datetime->format('Y-m-d H:i:s')?>" name="sp_nn" >
               </div>

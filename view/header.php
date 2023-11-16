@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.2-web/css/all.min.css">
     <div id="fb-root"></div>
-    <script src="../assets/Jquery/Jquery3.7.1.js"></script>
-    <script src="../assets/Javascript/script.js"></script>
+    <script src="assets/Jquery/Jquery3.7.1.js"></script>
+    <script src="assets/Javascript/js2.js"></script>
     <title>TẠP HÓA VĂN PHÒNG PHẨM</title>
     <nav class="navbar navbar-expand-sm bg-light" style="margin: auto; text-align: center;">
       <div class="container">
         <a href="home.php" class="navbar-brand" style="color: black;">
-          <img src="../image/logo.png" alt="Logo" class="rounded-circle" width="40px" height="40px">
+          <img src="image/logo.png" alt="Logo" class="rounded-circle" width="40px" height="40px">
           VĂN PHÒNG PHẨM
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -42,33 +42,37 @@
     <nav class="navbar navbar-expand-sm " style="font-size: 16px;" >
       <ul class="navbar-nav" style="margin: auto;">
         <li class="nav-item">
-          <a href="home.php" class="nav-link" style="color: black;"><b>TRANG CHỦ</b></a>
+          <a href="#" onclick="loadPage('home');" class="nav-link" style="color: black;"><b>TRANG CHỦ</b></a>
         </li>
         <li class="nav-item dropdown " style="margin-left: 140px;">
           <a href="#" class="nav-link " style="color: black;"><b>SẢN PHẨM</b></a>
           <ul class="dropdown-menu ">
           
-            <li><a onclick="ajax_danhmucsp('all')" class="dropdown-item">Tất cả sản phẩm</a></li>
-            <li><a onclick="ajax_danhmucsp('pen')" class="dropdown-item">Bút-viết</a></li>
-            <li><a onclick="ajax_danhmucsp('student_tools')" class="dropdown-item">Dụng cụ học sinh</a></li>
-            <li><a onclick="ajax_danhmucsp('office_tools')" class="dropdown-item">Dụng cụ văn phòng</a></li>
-            <li><a onclick="ajax_danhmucsp('draw_tools')" class="dropdown-item">Dụng cụ vẽ</a></li>
-            <li><a onclick="ajax_danhmucsp('paper_product')" class="dropdown-item">Sản phẩm về giấy</a></li>
-            <li><a onclick="ajax_danhmucsp('calculator')" class="dropdown-item">Máy tính cầm tay</a></li>
-            <li><a onclick="ajax_danhmucsp('bag')" class="dropdown-item">Ba lô</a></li>
-            <li><a onclick="ajax_danhmucsp('other_product')" class="dropdown-item">Sản phẩm khác</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('all')" class="dropdown-item">Tất cả sản phẩm</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('pen')" class="dropdown-item">Bút-viết</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('student_tools')" class="dropdown-item">Dụng cụ học sinh</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('office_tools')" class="dropdown-item">Dụng cụ văn phòng</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('draw_tools')" class="dropdown-item">Dụng cụ vẽ</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('paper_product')" class="dropdown-item">Sản phẩm về giấy</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('calculator')" class="dropdown-item">Máy tính cầm tay</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('bag')" class="dropdown-item">Ba lô</a></li>
+            <li><a href="#" onclick="ajax_danhmucsp('other_product')" class="dropdown-item">Sản phẩm khác</a></li>
         
           </ul>
         </li>
         <li class="nav-item" style="margin-left: 140px;">
-          <a href="#" onclick="loadLienHe();" class="nav-link" style="color: black;"><b>GIỚI THIỆU</b></a>
+          <a href="#" onclick="loadPage('about');" class="nav-link" style="color: black;"><b>GIỚI THIỆU</b></a>
         </li>
         <li class="nav-item" style="margin-left: 140px;">
-          <a href="contact.php" class="nav-link" style="color: black;"><b>LIÊN HỆ</b></a>
+          <a href="#" onclick="loadPage('contact');" class="nav-link" style="color: black;"><b>LIÊN HỆ</b></a>
         </li>
       </ul>
     </nav>
     <hr style="margin-top: 5px;">
   </div>
-  <div class="container"id="lienhe-content"></div>
 </head>
+<div id="content">
+
+</div>
+
+  

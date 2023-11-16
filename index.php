@@ -3,23 +3,20 @@
 <?php 
 
 include("view/header.php");
+?>
+<body>
+    
 
-if((isset($_GET['act']))&&($_GET['act']!="")){
-    $act=$_GET['act'];
-    switch ($act) {
-        case 'gioithieu':
-            include "view/about.php";
-            break;
-        case 'lienhe':
-            include "view/contact.php";
-            break;
-        default:
-           include "view/home.php";
-            break;
-    }
-}  else{
-    include("view/home.php");
-}
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
+<script>
+    // Gọi hàm loadContent('home') khi trang được tải
+    $(document).ready(function () {
+        loadPage('home');
+    });
+</script>
 
+</body>
+<?php
 include("view/footer.php");
 ?>

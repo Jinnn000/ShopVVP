@@ -6,11 +6,34 @@ var options = {
     // Thêm các tùy chọn khác nếu cần
 };
 
+// function loadContent(option) {
+//     if (!options[option].loaded) {
+//         $.ajax({
+//             url:'view/'+ option + '.php',
+//             type: 'GET',
+//             success: function(response) {
+//                 $(options[option].container).html(response);
+//                 $(options[option].container).show();
+//                 // Ẩn các container khác
+//                 for (var key in options) {
+//                     if (key !== option) {
+//                         $(options[key].container).hide();
+//                         options[key].loaded = false;
+//                     }
+//                 }
+//                 options[option].loaded = true;
+//             },
+//             error: function(xhr, status, error) {
+//                 console.error('Error:', status, error);
+//             }
+//         });
+//     }
+// }
 function loadContent(option) {
     if (!options[option].loaded) {
         $.ajax({
-            url: option + '.php',
-            type: 'GET',
+            url: "view/" + option + ".php", // Sửa đường dẫn đến thư mục views
+            type: "GET",
             success: function(response) {
                 $(options[option].container).html(response);
                 $(options[option].container).show();
@@ -29,6 +52,7 @@ function loadContent(option) {
         });
     }
 }
+
 
 $(document).ready(function() {
     // Nếu bạn muốn tự động load một tùy chọn khi trang được tải
@@ -52,3 +76,17 @@ $('#bestsell-link').click(function() {
 });
 
 // Thêm các sự kiện click khác nếu có thêm tùy chọn
+
+function loadPage(page) {
+    $.ajax({
+        url: "view/"+page + ".php", // Tên file PHP tương ứng với trang cần load
+        type: "GET",
+        dataType: "html",
+        success: function (data) {
+            $("#content").html(data); // Thay thế nội dung của #content bằng nội dung của trang mới
+        },
+        error: function () {
+            alert("Error loading page");
+        }
+    });
+}

@@ -46,6 +46,7 @@
           <th>Giá</th>
           <th>Chất liệu</th>
           <th>Ngày nhập</th>
+          <th>Khuyến mãi</th>
           <th></th>
         </tr>
 
@@ -70,6 +71,7 @@
                     <td>' . $sanpham_gia . '</td>
                     <td>' . $sanpham_chatlieu . '</td>
                     <td>' . $sanpham_ngaynhap . '</td>
+                    <td>' . $khuyenmai . '</td>
                     <td><a class="nav-link" href="' . $suasp . '"><input type="button" value="Sửa"></a> <a class="nav-link" href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
                   </tr>';
           }

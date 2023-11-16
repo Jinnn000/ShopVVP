@@ -1,9 +1,10 @@
+
 <footer>
   <div class="container-fluid bg-light footer" >
     <div class="row">
       <div class="col-sm-3" >
-        <a href="home.php" class="navbar-brand" style="color: black;">
-          <img src="../image/logo.png" alt="Logo" class="rounded-circle" width="40px" height="40px">VĂN PHÒNG PHẨM
+        <a href="Index.php" class="navbar-brand" style="color: black;">
+          <img src="image/logo.png" alt="Logo" class="rounded-circle" width="40px" height="40px">VĂN PHÒNG PHẨM
         </a>
         <ul>
           <li><i class="fa-solid fa-location-dot icon"></i> &nbsp; 218 Lĩnh Nam, Hoàng Mai, Hà Nội</li>
