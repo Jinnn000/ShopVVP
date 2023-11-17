@@ -60,7 +60,9 @@
             BÁN CHẠY</b></a></li>
       <li class="nav-item"><a href="#" onclick="loadContent('bigsale');" class="nav-link lien-ket" style="color: black;"><b>BIG SALE</b></a></li>
     </ul>
+    
   </div>
+  <hr>
   <div class="container" id="sanpham-content"></div>
   <div class="container" id="sanphamnew-content"></div>
   <div class="container" id="bestsell-content"></div>

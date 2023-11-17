@@ -21,14 +21,14 @@
           <div class="col-sm-4" style="margin-top: 10px;">
             <b>Hỗ trợ khách hàng</b>
             <a href="#" class="nav-link" style="color: black;">Câu hỏi thường gặp</a>
-            <a href="#" class="nav-link" style="color: black;">Điều khoản dịch vụ</a>
+            <a href="#" onclick="loadPage('chinh-sach/dieu-khoan-dich-vu');" class="nav-link" style="color: black;">Điều khoản dịch vụ</a>
           </div>
           <div class="col-sm-4" style="margin-top: 10px;">
             <b>Chính sách</b>
-            <a href="#" class="nav-link" style="color: black;">Chính sách bảo mật</a>
-            <a href="#" class="nav-link" style="color: black;">Chính sách thanh toán</a>
-            <a href="#" class="nav-link" style="color: black;">Chính sách vận chuyển</a>
-            <a href="#" class="nav-link" style="color: black;">Chính sách đổi trả</a>
+            <a href="#" onclick="loadPage('chinh-sach/chinh-sach-doi-tra');" class="nav-link" style="color: black;">Chính sách bảo mật</a>
+            <a href="#" onclick="loadPage('chinh-sach/chinh-sach-thanh-toan');" class="nav-link" style="color: black;">Chính sách thanh toán</a>
+            <a href="#" onclick="loadPage('chinh-sach/chinh-sach-van-chuyen');" class="nav-link" style="color: black;">Chính sách vận chuyển</a>
+            <a href="#" onclick="loadPage('chinh-sach/chinh-sach-doi-tra');" class="nav-link" style="color: black;">Chính sách đổi trả</a>
           </div>
         </div>
         <div class="row" style="margin-top: 20px; margin-left: 30px;">
