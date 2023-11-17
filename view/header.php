@@ -13,7 +13,7 @@
     <title>TẠP HÓA VĂN PHÒNG PHẨM</title>
     <nav class="navbar navbar-expand-sm bg-light" style="margin: auto; text-align: center;">
       <div class="container">
-        <a href="home.php" class="navbar-brand" style="color: black;">
+        <a href="index.php" class="navbar-brand" style="color: black;">
           <img src="image/logo.png" alt="Logo" class="rounded-circle" width="40px" height="40px">
           VĂN PHÒNG PHẨM
         </a>
@@ -42,12 +42,12 @@
     <nav class="navbar navbar-expand-sm " style="font-size: 16px;" >
       <ul class="navbar-nav" style="margin: auto;">
         <li class="nav-item">
-          <a href="#" onclick="loadPage('home');" class="nav-link" style="color: black;"><b>TRANG CHỦ</b></a>
+          <a href="index.php"  class="nav-link" style="color: black;"><b>TRANG CHỦ</b></a>
         </li>
         <li class="nav-item dropdown " style="margin-left: 140px;">
           <a href="#" class="nav-link " style="color: black;"><b>SẢN PHẨM</b></a>
           <ul class="dropdown-menu ">
-          
+            
             <li><a href="#" onclick="ajax_danhmucsp('all')" class="dropdown-item">Tất cả sản phẩm</a></li>
             <li><a href="#" onclick="ajax_danhmucsp('pen')" class="dropdown-item">Bút-viết</a></li>
             <li><a href="#" onclick="ajax_danhmucsp('student_tools')" class="dropdown-item">Dụng cụ học sinh</a></li>
