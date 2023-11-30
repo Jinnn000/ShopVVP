@@ -52,7 +52,22 @@ function loadContent(option) {
         });
     }
 }
-
+function ajax_danhmucsp(danhmuc_id) {
+    // Thực hiện AJAX
+    $.ajax({
+        type: 'POST',
+        url: "view/dmsanpham.php", // Thay đổi đường dẫn tới file PHP của bạn
+        data: { danhmuc_id: danhmuc_id },
+        success: function(response) {
+            // Xử lý kết quả từ server
+            $('#content').html(response);
+            // Có thể thực hiện các bước tiếp theo tại đây, ví dụ: cập nhật nội dung trang web, hiển thị sản phẩm, v.v.
+        },
+        error: function(error) {
+            console.log('Error:', error);
+        }
+    });
+}
 
 $(document).ready(function() {
     // Nếu bạn muốn tự động load một tùy chọn khi trang được tải

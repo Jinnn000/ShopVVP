@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php 
+    include("model/pdo.php");
+    include("model/danhmuc.php");
+    include("model/khachhang.php");
+    $listdm=load_danhmuc();
+  ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +39,7 @@
               </li>
               <li class="nav-item"><a href="#" onclick="loadPage('Login');" class="nav-link" style="color: black; margin-left: 50px;">Đăng nhập</a></li>
               <li class="nav-item" style="margin-top: 7px;">|</li>
-              <li class="nav-item"><a href="" onclick="loadPage('Register');" class="nav-link" style="color: black;">Đăng ký</a></li>
+              <li class="nav-item"><a href="#" onclick="loadPage('Register');" class="nav-link" style="color: black;">Đăng ký</a></li>
           </ul>         
         </div>
       </div>     
@@ -47,17 +53,15 @@
         <li class="nav-item dropdown " style="margin-left: 140px;">
           <a href="#" class="nav-link " style="color: black;"><b>SẢN PHẨM</b></a>
           <ul class="dropdown-menu ">
-            
-            <li><a href="#" onclick="ajax_danhmucsp('all')" class="dropdown-item">Tất cả sản phẩm</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('pen')" class="dropdown-item">Bút-viết</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('student_tools')" class="dropdown-item">Dụng cụ học sinh</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('office_tools')" class="dropdown-item">Dụng cụ văn phòng</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('draw_tools')" class="dropdown-item">Dụng cụ vẽ</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('paper_product')" class="dropdown-item">Sản phẩm về giấy</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('calculator')" class="dropdown-item">Máy tính cầm tay</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('bag')" class="dropdown-item">Ba lô</a></li>
-            <li><a href="#" onclick="ajax_danhmucsp('other_product')" class="dropdown-item">Sản phẩm khác</a></li>
-        
+          <li><a href="#" onclick="loadPage('dm01_sp');" class="dropdown-item">Bút-viết</a>
+             <li><a href="#" onclick="loadPage('dm02_sp');" class="dropdown-item">Dụng cụ học sinh</a>
+             <li><a href="#" onclick="loadPage('dm03_sp');" class="dropdown-item">Dụng cụ văn phòng</a>
+             <li><a href="#" onclick="loadPage('dm04_sp');" class="dropdown-item">Dụng cụ vẽ</a>
+             <li><a href="#" onclick="loadPage('dm05_sp');" class="dropdown-item">Sản phẩm về giấy</a>
+             <li><a href="#" onclick="loadPage('dm06_sp');" class="dropdown-item">Sản phẩm khác</a>
+             <li><a href="#" onclick="loadPage('dm07_sp');" class="dropdown-item">Máy tính cầm tay</a>
+             <li><a href="#" onclick="loadPage('dm08_sp');" class="dropdown-item">Ba lô</a>
+
           </ul>
         </li>
         <li class="nav-item" style="margin-left: 140px;">

@@ -17,52 +17,47 @@
                 <thead>
                   <tr>
                     <th></th>
+                    <th>Mã thành viên</th>
+                    <th> Họ Tên thành viên</th>
                     <th>Email</th>
-                    <th>Họ tên</th>
                     <th>Mật khẩu</th>
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
                     <th>Ngày tạo</th>
+                    <th>Quyền</th>
                     <th></th>
+                    
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <?php
+                   foreach ($list as $khachhang) {
+                    extract($khachhang); 
+                    $suakh="admin_index.php?act=suakh&khachhang_id=".$khachhang_id;
+                    $xoakh="admin_index.php?act=xoakh&khachhang_id=".$khachhang_id;
+                    echo '<tr>
                     <td><input type="checkbox" name="" id=""></td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td>Doe</td>
-                    <td>doe</td>
-                    <td>Doe</td>
-                    <td>doe</td>
-                    <td><input type="button" value="Sửa"> <input type="button" value="Xóa"></td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td>Doe</td>
-                    <td>doe</td>
-                    <td>Doe</td>
-                    <td>doe</td>
-                    <td><input type="button" value="Sửa"> <input type="button" value="Xóa"></td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td>Doe</td>
-                    <td>doe</td>
-                    <td>Doe</td>
-                    <td>doe</td>
-                    <td><input type="button" value="Sửa"> <input type="button" value="Xóa"></td>
-                  </tr>
+                    <td>' . $khachhang_id . '</td>
+                    <td>' . $khachhang_hoten . '</td>
+                    <td>' . $khachhang_email. '</td>
+                    <td>' . $khachhang_mk . '</td>
+                    <td>' . $khachhang_diachi . '</td>
+                    <td>' . $khachhang_sodt . '</td>
+                    <td>' . $khachhang_ngaytao . '</td>
+                    <td>' . $khachhang_quyen . '</td>
+                   
+                    <td><a class="nav-link" href="'.$suakh.'"><input type="button" value="Sửa"></a> <a class="nav-link" href="'.$xoakh.'"><input type="button" value="Xóa"></a></td>
+                  </tr>';
+                   }
+                   ?>
+                  
+                  
                 </tbody>
               </table>
                 <button type="button" class="btn btn-outline-primary btn-sm" >chọn tất cả</button>
                 <button type="button" class="btn btn-outline-primary btn-sm">Bỏ chọn tất cả</button>
                 <button type="button" class="btn btn-outline-primary btn-sm">Xóa các mục đã chọn</button>
-                <a href="danhmuc.html" ><button type="button" class="btn btn-outline-primary btn-sm">Thêm mới</button></a>
+                <a href="admin_index.php?act=khachhang" ><button type="button" class="btn btn-outline-primary btn-sm">Thêm mới</button></a>
             
         </div>
         <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>

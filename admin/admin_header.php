@@ -34,7 +34,7 @@
             <a href="admin_index.php?act=addsp" class="nav-link" style="color: black;"><b>SẢN PHẨM</b></a>
           </li>
           <li class="nav-item" style="margin-left: 140px;">
-            <a href="admin_index.php?act=khachhang" class="nav-link" style="color: black;"><b>KHÁCH HÀNG</b></a>
+            <a href="admin_index.php?act=addkhachhang" class="nav-link" style="color: black;"><b>KHÁCH HÀNG</b></a>
           </li>
           <li class="nav-item" style="margin-left: 140px;">
             <a href="admin_index.php?act=thongke" class="nav-link" style="color: black;"><b>THỐNG KÊ</b></a>

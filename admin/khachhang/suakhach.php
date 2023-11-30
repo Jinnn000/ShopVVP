@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    if(is_array($dm)){
-        extract($dm);
+    if(is_array($kh)){
+        extract($kh);
     }
 ?>
 <head>
@@ -18,18 +18,36 @@
 
 <body>
     <div class="container bg-light">
-        <h2>Sửa danh mục</h2>
-        <form action="admin_index.php?act=update" method="POST">
+        <h2>Sửa khách hàng</h2>
+        <form action="admin_index.php?act=updatekh" method="POST">
             <div class="mb-3 mt-3">
-                <input type="text" class="form-control" id="dm_id" placeholder="Mã danh mục" name="dm_id" value="<?=$danhmuc_id ?>" disabled>
+                <input type="text" class="form-control" id="kh_id" placeholder="Mã khach hang" name="kh_id" value="<?=$khachhang_id ?>" disabled>
             </div>
             <div class="mb-3">
-                <input type="text" class="form-control" id="dm_ten" placeholder="Tên danh mục" name="dm_ten" value="<?=$danhmuc_ten ?>">
+                <input type="text" class="form-control" id="kh_ten" placeholder="Tên khách hàng" name="kh_ten" value="<?=$khachhang_hoten ?>">
             </div>
-            <input type="hidden" name="dm_id" value="<?php if (isset($danhmuc_id) && ($danhmuc_id != "")) echo $danhmuc_id;?>">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="kh_email" placeholder="Email" value="<?=$khachhang_email ?>" name="kh_email">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="kh_mk" placeholder="Mật khẩu" value="<?=$khachhang_mk ?>" name="kh_mk">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="kh_dc" placeholder="Địa chỉ" value="<?=$khachhang_diachi ?>" name="kh_dc">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="kh_sdt" placeholder="Số điện thoại" value="<?=$khachhang_sodt ?>" name="kh_sdt">
+              </div>
+              <div class="mb-3">
+                <input type="date" class="form-control" id="kh_nt" placeholder="Ngày tạo" value="<?=$khachhang_ngaytao ?>" name="kh_nt">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="kh_quyen" placeholder="Quyền" value="<?=$khachhang_quyen ?>" name="kh_quyen">
+              </div>
+            <input type="hidden" name="dm_id" value="<?php if (isset($khachhang_id) && ($khachhang_id != "")) echo $khachhang_id;?>">
             <button type="submit" class="btn btn-primary btn-sm" name="btn_sua">Cập nhật</button>
             <button type="reset" class="btn btn-primary btn-sm">Nhập lại</button>
-            <a href="admin_index.php?act=listdm"><button type="button" class="btn btn-primary btn-sm">Danh sách</button></a>
+            <a href="admin_index.php?act=list_kh"><button type="button" class="btn btn-primary btn-sm">Danh sách</button></a>
         </form>
 
     </div>

@@ -26,13 +26,13 @@
             </div>           
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="image/Untitled.png" alt="0" class="d-block" style="width:100%">
+                <img src="image/banner4.jpg" alt="0" class="d-block" style="width:100%">
               </div>
               <div class="carousel-item">
-                <img src="image/Untitled2.png" alt="1" class="d-block" style="width:100%">
+                <img src="image/banner5.jpg" alt="1" class="d-block" style="width:100%">
               </div>
               <div class="carousel-item">
-                <img src="image/Untitled3.png" alt="2" class="d-block" style="width:100%">
+                <img src="image/banner6.jpg" alt="2" class="d-block" style="width:100%">
               </div>
               <div class="carousel-item">
                 <img src="image/999.png" alt="3" class="d-block" style="width:100%">

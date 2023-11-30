@@ -51,6 +51,14 @@ function load_sanpham($tensp,$danhmuc_id){
     $list = pdo_query($sql);
     return $list;
 }
+function load_spdm($dm_id){
+    $sql = "SELECT * FROM sanpham
+        INNER JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+        WHERE sanpham.danhmuc_id = '".$dm_id."'";
+
+    $list = pdo_query($sql);
+    return $list;
+}
 function load_sanpham_home(){
     $sql="select * from sanpham where 1 order by sanpham_id desc limit 0,12";
     $listsp = pdo_query($sql);
@@ -63,6 +71,70 @@ function load_newsanpham_home(){
 }
 function load_bestsell_home(){
     $sql="select * from sanpham where 1 order by luotmua desc limit 0,12";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm01(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_01' ";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm02(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_02' ";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm03(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_03' ";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm04(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_04' ";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm05(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_05' ";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm06(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_06' ";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm07(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_07' ";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+function load_dm08(){
+    $sql="SELECT *
+    FROM sanpham
+    JOIN danhmuc ON sanpham.danhmuc_id = danhmuc.danhmuc_id
+    WHERE sanpham.danhmuc_id = 'DM_08' ";
     $listsp = pdo_query($sql);
     return $listsp;
 }
@@ -82,7 +154,7 @@ function update_sanpham($dm_id,$sp_id, $sp_ten, $sp_ncc, $sp_xx, $sp_m, $sp_cl, 
 
     try {
         $filename = $_FILES['sp_anh']['name'];
-        $target_dir = '../image/upload/';
+        $target_dir = '../image/product_image/';
         $target_file = $target_dir . basename($_FILES["sp_anh"]["name"]);
         if (move_uploaded_file($_FILES["sp_anh"]["tmp_name"], $target_file)) {}
             $sp_nn_datetime = new DateTime($sp_nn);

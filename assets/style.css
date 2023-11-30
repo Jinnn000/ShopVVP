@@ -11,7 +11,7 @@ color: black; /* Đặt màu chữ thành đen */
 }
 .carousel-inner{
 border-radius: 20px;
-height: 700px;
+height: 600px;
 }
 .row1{
 height: 154px;
@@ -29,7 +29,7 @@ height: 154px;
     height: 201px; 
   }
   .nav-item:hover a {
-    color: green; /* Đổi màu chữ khi hover vào liên kết */
+    /* Đổi màu chữ khi hover vào liên kết */
     text-decoration: none; /* Thêm gạch chân khi hover vào liên kết */
   }
   /* Login form */

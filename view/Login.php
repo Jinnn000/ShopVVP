@@ -14,10 +14,10 @@
         <span></span>
         <label>Mật khẩu</label>
       </div>
-      <a class="pass" href="forgotpass.html">Quên mật khẩu?</a>
-      <input type="submit" value="Đăng nhập" style="margin-top: 20px;">
+      <a class="pass" href="#" onclick="loadPage('forgotpass')">Quên mật khẩu?</a>
+      <input type="submit" name="dangnhap" value="Đăng nhập" style="margin-top: 20px;">
       <div class="signup_link">
-        Không phải thành viên? <a href="Register.html">Đăng ký</a>
+        Không phải thành viên? <a href="#" onclick="loadPage('Register')">Đăng ký</a>
       </div>
     </form>
   </div>

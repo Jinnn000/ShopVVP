@@ -13,28 +13,31 @@
     <body>
         <div class="container bg-light">
             <h2>Thêm mới thành viên</h2>
-        <form action="/action_page.php">
+        <form action="admin_index.php?act=addkhachhang" method="POST">
             <div class="mb-3 mt-3">
-              <input type="text" class="form-control" id="sp_id" placeholder="Email" name="sp_id">
+              <input type="text" class="form-control" id="kh_id" placeholder="Mã thành viên" name="kh_id">
             </div>
             <div class="mb-3">     
-              <input type="text" class="form-control" id="sp_ten" placeholder="Họ tên" name="sp_ten">
+              <input type="text" class="form-control" id="kh_ten" placeholder="Họ tên" name="kh_ten">
             </div>
             <div class="mb-3">
-                <input type="text" class="form-control" id="sp_ncc" placeholder="Mật khẩu" name="sp_ncc">
+                <input type="text" class="form-control" id="kh_email" placeholder="Email" name="kh_email">
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="sp_xx" placeholder="Địa chỉ" name="sp_xx">
+                <input type="text" class="form-control" id="kh_mk" placeholder="Mật khẩu" name="kh_mk">
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="sp_m" placeholder="Số điện thoại" name="sp_m">
+                <input type="text" class="form-control" id="kh_dc" placeholder="Địa chỉ" name="kh_dc">
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="sp_cl" placeholder="Ngày tạo" name="sp_cl">
+                <input type="text" class="form-control" id="kh_sdt" placeholder="Số điện thoại" name="kh_sdt">
               </div>
-            <button type="submit" class="btn btn-primary btn-sm">Thêm mới</button>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="kh_quyen" placeholder="Quyền" name="kh_quyen">
+              </div>
+            <button type="submit" class="btn btn-primary btn-sm" name="btn_them">Thêm mới</button>
             <button type="reset" class="btn btn-primary btn-sm">Nhập lại</button>
-            <a href="admin_index.php?act=ds_danhmuc"><button type="button" class="btn btn-primary btn-sm">Danh sách</button></a>
+            <a href="admin_index.php?act=list_kh"><button type="button" class="btn btn-primary btn-sm">Danh sách</button></a>
           </form>
         </div>
         <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
