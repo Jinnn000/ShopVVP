@@ -36,7 +36,7 @@
                         <span class="discount">'.$khuyenmai.'% off</span>
                                 <ul>
                                         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                        
                                         <li><a href="#"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                         </div>

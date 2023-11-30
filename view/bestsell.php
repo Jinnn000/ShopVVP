@@ -34,7 +34,7 @@
                         <div class="part-1" style="background: url('.$img.') no-repeat center; background-size:contain;">
                                 <ul>
                                         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                        
                                         <li><a href="#"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                         </div>
