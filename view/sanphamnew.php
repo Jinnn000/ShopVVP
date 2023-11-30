@@ -36,7 +36,7 @@
                                 <ul>
                                         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                                         
-                                        <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                        <li><a href="view/sp_detail.php?id='.$sanpham_id.'"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                         </div>
                         <div class="part-2">

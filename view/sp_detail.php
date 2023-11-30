@@ -1,11 +1,27 @@
 <!DOCTYPE html>
+<?php
+  include("../model/pdo.php");
+  include("../model/sanpham.php");
+  
+  $sp=load_onesp($_GET['id']);
+
+  if(is_array($sp)){
+
+    extract($sp);}
+  
+    $img = "../image/" . $sanpham_anh;
+    $hinh = "<img src='" . $img . "' height=80px>";
+    
+    $sp_nn_datetime = new DateTime($sanpham_ngaynhap);
+   // $page="localhost/ShopVVP/index.php";
+?>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Product Card/Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/styledm.css">
+    <link rel="stylesheet" href="../assets/styledm.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   </head>
   <body>
@@ -16,7 +32,7 @@
         <div class = "product-imgs">
           <div class = "img-display">
             <div class = "img-showcase">
-              <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+            <img src="<?php echo $img?>" alt="product image ">
               
             </div>
           </div>
@@ -24,8 +40,8 @@
         </div>
         <!-- card right -->
         <div class = "product-content">
-          <h2 class = "product-title">nike shoes</h2>
-          <a href = "#" class = "product-link">visit nike store</a>
+          <h2 class = "product-title"><?php echo $sanpham_ten; ?></h2>
+          <a href = "../index.php" class = "product-link">visit my store</a>
           <div class = "product-rating">
             <i class = "fas fa-star"></i>
             <i class = "fas fa-star"></i>
@@ -36,8 +52,8 @@
           </div>
 
           <div class = "product-price">
-            <p class = "last-price">Old Price: <span>$257.00</span></p>
-            <p class = "new-price">New Price: <span>$249.00 (5%)</span></p>
+           
+            <p class = "new-price">New Price: <span><?php echo $sanpham_gia; ?></span></p>
           </div>
 
           <div class = "product-detail">
@@ -45,11 +61,11 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
             <ul>
-              <li>Color: <span>Black</span></li>
-              <li>Available: <span>in stock</span></li>
-              <li>Category: <span>Shoes</span></li>
-              <li>Shipping Area: <span>All over the world</span></li>
-              <li>Shipping Fee: <span>Free</span></li>
+              <li>Màu: <span><?php echo $sanpham_mau; ?></span></li>
+              <li>Nhà cung cấp: <span><?php echo $sanpham_ten; ?></span></li>
+              <li>Xuất Xứ: <span><?php echo $sanpham_xuatxu; ?></span></li>
+              
+              <li>Chất liệu: <span><?php echo $sanpham_chatlieu; ?></span></li>
             </ul>
           </div>
 
@@ -67,6 +83,6 @@
     </div>
 
     
-    <script src="scriptdm.js"></script>
+    <script src="../assets/Javascript/scriptdm.js"></script>
   </body>
 </html>

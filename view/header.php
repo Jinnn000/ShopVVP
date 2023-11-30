@@ -4,6 +4,7 @@
     include("model/pdo.php");
     include("model/danhmuc.php");
     include("model/khachhang.php");
+    
     $listdm=load_danhmuc();
   ?>
 <head>
@@ -29,9 +30,9 @@
         <div class="collapse navbar-collapse" id="mynavbar">
           <ul class="navbar-nav me-auto">
               <li >
-                <form class="d-flex" style="padding-left: 200px;">
-                  <input class="form-control me-2" type="text" placeholder="Tìm kiếm" style="width: 300px;" >
-                  <button class="btn btn-primary" type="button" style="color: black;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <form class="d-flex" style="padding-left: 200px;" action="view/search_sp.php" method="post" onsubmit="return LoadPageSearch('search_sp', this)">
+                  <input class="form-control me-2" type="text" placeholder="Tìm kiếm" style="width: 300px;" name="kyw" >
+                  <button class="btn btn-primary" type="submit"  style="color: black;"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
               </li>
               <li class="nav-item" style="margin-left: 100px ;">
@@ -76,6 +77,9 @@
   </div>
 </head>
 <div id="content">
+
+</div>
+<div id="content1">
 
 </div>
 

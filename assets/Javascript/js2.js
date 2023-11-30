@@ -105,3 +105,28 @@ function loadPage(page) {
         }
     });
 }
+function loadPageSearch(page, formData) {
+    $.ajax({
+        url: "view/" + page + ".php",
+        type: "POST",
+        dataType: "html",
+        data: formData, // Truyền dữ liệu biểu mẫu ở đây
+        success: function (data) {
+            $("#content1").html(data);
+        },
+        error: function () {
+            alert("Lỗi khi tải trang");
+        }
+    });
+}
+
+// Gọi hàm này khi biểu mẫu được gửi đi
+$("#searchForm").submit(function (event) {
+    event.preventDefault(); // Ngăn chặn việc gửi đi mặc định của biểu mẫu
+
+    var formData = $(this).serialize(); // Chuỗi hóa dữ liệu biểu mẫu
+
+    // Gọi hàm loadPage với "search_sp" làm tham số trang và dữ liệu biểu mẫu
+    loadPageSearch("search_sp", formData);
+});
+

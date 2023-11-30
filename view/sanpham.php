@@ -22,6 +22,7 @@
 <section class="section-products">
 <div class="container">
     <div class="row">
+    
         <?php 
             foreach ($listsp as $sanpham) {
                 extract($sanpham);
@@ -34,7 +35,7 @@
                         <div class="part-1" style="background: url('.$img.') no-repeat center; background-size:contain;">
                                 <ul>
                                         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                        <li><a href="view/sp_detail.php?id='.$sanpham_id.'"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                         </div>
                         <div class="part-2">
@@ -47,5 +48,6 @@
             }
         ?>
     </div>
+    
 </div>
 </section>
