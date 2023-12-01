@@ -79,10 +79,7 @@
     <hr style="margin-top: 5px;">
   </div>
 </head>
-<body>
-    
-</body>
-</html>
+<body> 
 <section class="section-products">
 <div class="container">
     <div class="row">
@@ -115,6 +112,7 @@
     </div>
 </div>
 </section>
+</body>
 <footer>
   <div class="container-fluid bg-light footer" >
     <div class="row">
