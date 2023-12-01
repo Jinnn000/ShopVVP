@@ -32,7 +32,14 @@
                 <img src="image/banner6.jpg" alt="1" class="d-block" style="width:100%">
               </div>
               <div class="carousel-item">
+<<<<<<< HEAD
                 <img src="image/banner4.jpg" alt="2" class="d-block" style="width:100%">
+=======
+                <img src="image/banner6.jpg" alt="2" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img src="image/banner.png" alt="3" class="d-block" style="width:100%; height: 50%;">
+>>>>>>> 029df6fb9b8e966547b2b8eff2f34b818d84d36a
               </div>
              
             </div>           

@@ -36,7 +36,7 @@
                 </form>
               </li>
               <li class="nav-item" style="margin-left: 100px ;">
-                <a class="nav-link" href="#" style="color: black;"><i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i></a>
+                <a class="nav-link" href="#" onclick="loadPage('home');" style="color: black;"><i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i></a>
               </li>
               <li class="nav-item"><a href="view/Login.php"  class="nav-link" style="color: black; margin-left: 50px;">Đăng nhập</a></li>
               <li class="nav-item" style="margin-top: 7px;">|</li>

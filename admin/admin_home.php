@@ -12,7 +12,11 @@
     </head>
     <body>
         <div class="container bg-light">
+<<<<<<< HEAD
            
+=======
+            
+>>>>>>> 029df6fb9b8e966547b2b8eff2f34b818d84d36a
         </div>
         <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
     </body>
