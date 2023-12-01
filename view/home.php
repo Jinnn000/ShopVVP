@@ -22,21 +22,19 @@
               <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
               <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
               <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+              
             </div>           
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="image/banner4.jpg" alt="0" class="d-block" style="width:100%">
+                <img src="image/banner5.jpg" alt="0" class="d-block" style="width:100%">
               </div>
               <div class="carousel-item">
-                <img src="image/banner5.jpg" alt="1" class="d-block" style="width:100%">
+                <img src="image/banner6.jpg" alt="1" class="d-block" style="width:100%">
               </div>
               <div class="carousel-item">
-                <img src="image/banner6.jpg" alt="2" class="d-block" style="width:100%">
+                <img src="image/banner4.jpg" alt="2" class="d-block" style="width:100%">
               </div>
-              <div class="carousel-item">
-                <img src="image/999.png" alt="3" class="d-block" style="width:100%">
-              </div>
+             
             </div>           
             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
               <span class="carousel-control-prev-icon"></span>

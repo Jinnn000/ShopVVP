@@ -15,6 +15,7 @@
           <img src="../image/logo.png" alt="Logo" class="rounded-circle" width="40px" height="40px">
           ADMIN
         </a>
+        <a href="#" onclick="logout">Đăng xuất</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
           <span class="navbar-toggler-icon"></span>
         </button>   
@@ -34,7 +35,7 @@
             <a href="admin_index.php?act=addsp" class="nav-link" style="color: black;"><b>SẢN PHẨM</b></a>
           </li>
           <li class="nav-item" style="margin-left: 140px;">
-            <a href="admin_index.php?act=addkhachhang" class="nav-link" style="color: black;"><b>KHÁCH HÀNG</b></a>
+            <a href="admin_index.php?act=addkhachhang" class="nav-link" style="color: black;"><b>THÀNH VIÊN</b></a>
           </li>
           <li class="nav-item" style="margin-left: 140px;">
             <a href="admin_index.php?act=thongke" class="nav-link" style="color: black;"><b>THỐNG KÊ</b></a>
@@ -43,4 +44,9 @@
       </nav>
       <hr style="margin-top: 5px;">
     </div>
+    <script>
+function logout() {
+    window.location.href = "../index.php";
+}
+</script>
 </head>

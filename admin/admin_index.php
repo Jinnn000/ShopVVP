@@ -288,7 +288,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 include "khachhang/ds_khachhang.php";
                 break;
         case 'thongke':
-            include "khachhang/ds_khachhang.php";
+            include "admin_home.php";
             break;
         default:
             include "admin_home.php";

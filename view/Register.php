@@ -3,7 +3,7 @@
   include("../model/pdo.php");
   include("../model/khachhang.php");
   ?>
-?>
+
 <body style="height: 2000px">
   <div class="center" style="height: 650px;">
     <h1>Đăng ký</h1>

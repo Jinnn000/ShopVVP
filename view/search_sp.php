@@ -93,11 +93,11 @@
                 <div id="product-1" class="single-product"  >
                 
                         <div class="part-1" style="background: url('.$img.') no-repeat center; background-size:contain;">
-                        <span class="new">new</span>
+                        
                                 <ul>
                                         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                                         
-                                        <li><a href="view/sp_detail.php?id='.$sanpham_id.'"><i class="fas fa-expand"></i></a></li>
+                                        <li><a href="sp_detail.php?id='.$sanpham_id.'"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                         </div>
                         <div class="part-2">

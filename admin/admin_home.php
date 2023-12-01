@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="container bg-light">
-            <h2>Siuuuu</h2>
+           
         </div>
         <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
     </body>
