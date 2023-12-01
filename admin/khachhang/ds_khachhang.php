@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="container bg-light">
-            <h2>Quản lý danh mục</h2>
+            <h2>Thống kê</h2>
             <table class="table table-hover">
                 <thead>
                   <tr>

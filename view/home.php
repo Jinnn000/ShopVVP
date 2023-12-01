@@ -35,7 +35,7 @@
                 <img src="image/banner6.jpg" alt="2" class="d-block" style="width:100%">
               </div>
               <div class="carousel-item">
-                <img src="image/999.png" alt="3" class="d-block" style="width:100%">
+                <img src="image/banner.png" alt="3" class="d-block" style="width:100%; height: 50%;">
               </div>
             </div>           
             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
