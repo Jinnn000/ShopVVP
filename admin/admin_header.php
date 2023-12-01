@@ -15,7 +15,7 @@
           <img src="../image/logo.png" alt="Logo" class="rounded-circle" width="40px" height="40px">
           ADMIN
         </a>
-        <a href="#" onclick="logout">Đăng xuất</a>
+        <a href="http://localhost/ShopVVP/index.php" >Đăng xuất</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
           <span class="navbar-toggler-icon"></span>
         </button>   
@@ -46,7 +46,7 @@
     </div>
     <script>
 function logout() {
-    window.location.href = "../index.php";
+    window.location.href = "index.php";
 }
 </script>
 </head>
