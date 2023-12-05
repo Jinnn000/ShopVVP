@@ -17,6 +17,7 @@
     <div id="fb-root"></div>
     <script src="assets/Jquery/Jquery3.7.1.js"></script>
     <script src="assets/Javascript/js2.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TẠP HÓA VĂN PHÒNG PHẨM</title>
     <nav class="navbar navbar-expand-sm bg-light" style="margin: auto; text-align: center;">
       <div class="container">

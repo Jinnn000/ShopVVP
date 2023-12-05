@@ -53,11 +53,11 @@
 
           <div class = "product-price">
            
-            <p class = "new-price">New Price: <span><?php echo $sanpham_gia; ?></span></p>
+            <p class = "new-price">Price:  <span><?php echo $sanpham_gia; ?>VNĐ</span></p>
           </div>
 
           <div class = "product-detail">
-            <h2>about this item: </h2>
+            <h2>Mô tả : </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
             <ul>
