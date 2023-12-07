@@ -4,6 +4,7 @@
     include("../model/pdo.php");
     include("../model/sanpham.php");
     $listsp=load_newsanpham_home();
+    session_start();
     ?>
 <head>
 <meta charset="UTF-8">
@@ -34,7 +35,16 @@
                         <div class="part-1" style="background: url('.$img.') no-repeat center; background-size:contain;">
                         <span class="new">new</span>
                                 <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li>       
+                                <form action="view/cart.php" method="post">
+                                <input type="hidden" name="id" value="' . $sanpham_id . '">
+                                <input type="hidden" name="name" value="' . $sanpham_ten . '">
+                                <input type="hidden" name="anh" value="' . $img . '">
+                                <input type="hidden" name="price" value="' . $sanpham_gia . '">
+                                <button type="submit" class="btn btn-success" name="addtocart" value="true"><i class="fas fa-shopping-cart"></i></button>
+                                
+                                </form>
+                                </li>
                                         
                                         <li><a href="view/sp_detail.php?id='.$sanpham_id.'"><i class="fas fa-expand"></i></a></li>
                                 </ul>

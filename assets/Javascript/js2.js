@@ -129,4 +129,26 @@ $("#searchForm").submit(function (event) {
     // Gọi hàm loadPage với "search_sp" làm tham số trang và dữ liệu biểu mẫu
     loadPageSearch("search_sp", formData);
 });
+function addToCart(formData) {
+    $.ajax({
+        type: 'POST',
+        url: 'view/cart.php',
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            $('#result-message').text('Sản phẩm đã được thêm vào giỏ hàng thành công!');
+        },
+        error: function (error) {
+            console.log(error);
+            $('#result-message').text('Có lỗi xảy ra khi thêm vào giỏ hàng.');
+        }
+    });
+}
 
+$(document).ready(function () {
+    $('.add-to-cart-form').submit(function (event) {
+        event.preventDefault();
+        var formData = $(this).serialize();
+        addToCart(formData);
+    });
+});

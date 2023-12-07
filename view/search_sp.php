@@ -4,7 +4,7 @@
     include("../model/pdo.php");
     include("../model/sanpham.php");
    
-    
+    session_start();
     $listsp=load_sanpham($_POST['kyw'],"");
     ?>
 <head>
@@ -95,7 +95,16 @@
                         <div class="part-1" style="background: url('.$img.') no-repeat center; background-size:contain;">
                         
                                 <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li>       
+                                <form action="cart.php" method="post" class="add-to-cart-form">
+                                <input type="hidden" name="id" value="' . $sanpham_id . '">
+                                <input type="hidden" name="name" value="' . $sanpham_ten . '">
+                                <input type="hidden" name="anh" value="' . $img . '">
+                                <input type="hidden" name="price" value="' . $sanpham_gia . '">
+                                <button type="submit" class="btn btn-success" name="addtocart" value="true"><i class="fas fa-shopping-cart"></i></button>
+                                
+                                </form>
+                                </li>
                                         
                                         <li><a href="sp_detail.php?id='.$sanpham_id.'"><i class="fas fa-expand"></i></a></li>
                                 </ul>

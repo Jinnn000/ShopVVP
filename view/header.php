@@ -55,7 +55,7 @@
                 </form>
               </li>
               <li class="nav-item" style="margin-left: 100px ;">
-                <a class="nav-link" href="#" onclick="loadPage('home');" style="color: black;"><i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i></a>
+                <a class="nav-link" href="view/cart.php"  style="color: black;"><i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i></a>
               </li>
               <?php if(isset($_SESSION['user'])){
                 extract($_SESSION['user']);
@@ -110,5 +110,6 @@
 <div id="content1">
 
 </div>
+
 
   
