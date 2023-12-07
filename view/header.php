@@ -5,7 +5,25 @@
     include("model/danhmuc.php");
     include("model/khachhang.php");
     
+    session_start();
+    
     $listdm=load_danhmuc();
+    if (isset($_GET['logout'])) {
+      // Xóa toàn bộ session
+      session_unset();
+      session_destroy();
+  
+      // Chuyển hướng người dùng về trang đăng nhập hoặc trang chính của bạn
+      header("Location: index.php");
+      exit();
+  }
+  if (isset($_SESSION['user']) && is_array($_SESSION['user'])) {
+    // Truy cập vào khóa "user" nếu tồn tại
+    $user = $_SESSION['user'];
+  }
+    
+    
+ 
   ?>
 <head>
     <meta charset="UTF-8">
@@ -39,9 +57,18 @@
               <li class="nav-item" style="margin-left: 100px ;">
                 <a class="nav-link" href="#" onclick="loadPage('home');" style="color: black;"><i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i></a>
               </li>
+              <?php if(isset($_SESSION['user'])){
+                extract($_SESSION['user']);
+              
+              ?>
+              <li class="nav-item" style="color: black; margin-left: 50px;" >Con chào bố <?=$user['khachhang_hoten']?></li>
+              <li class="nav-item" style="margin-top: 7px;">|</li>
+              <li class="nav-item"><a href="index.php?logout=1" class="nav-link" style="color: black;">Đăng xuất</a></li>
+              <?php } else {?>
               <li class="nav-item"><a href="view/Login.php"  class="nav-link" style="color: black; margin-left: 50px;">Đăng nhập</a></li>
               <li class="nav-item" style="margin-top: 7px;">|</li>
-              <li class="nav-item"><a href="#" onclick="loadPage('Register');" class="nav-link" style="color: black;">Đăng ký</a></li>
+              <li class="nav-item"><a href="view/Register.php"  class="nav-link" style="color: black;">Đăng ký</a></li>
+              <?php }?>
           </ul>         
         </div>
       </div>     

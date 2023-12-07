@@ -10,7 +10,7 @@
     try {
         
         pdo_execute($sql);
-        echo "Thêm thành công!";
+        
         echo "<script>document.getElementById('kh_id').value = '';
              document.getElementById('kh_ten').value = '';
              document.getElementById('kh_email').value = '';
@@ -25,7 +25,7 @@
         return true;
         exit();
     } catch (PDOException $e) {
-        echo "Thêm thất bại: " . $e->getMessage();
+        echo "" . $e->getMessage();
         return false;
     }
 }
@@ -67,10 +67,22 @@ function load_khachang(){
     $list = pdo_query($sql);
     return $list;
 }
+function get_kh( $kh_email,$kh_mk ){
+    $sql="select * from khachhang where khachhang_email= '".$kh_email."' and khachhang_mk= '".$kh_mk."' ";
+                $kh= pdo_query_one($sql);
+                return $kh;
+}
+function get_khid( $kh_id){
+    $sql="select * from khachhang where khachhang_id= '".$kh_id."' ";
+                $kh= pdo_query_one($sql);
+                return $kh;
+}
+
+
 function load_onekh( $kh_id ){
     $sql="select * from khachhang where khachhang_id= ?";
-                $dm= pdo_query_one($sql, $kh_id);
-                return $dm;
+                $kh= pdo_query_one($sql, $kh_id);
+                return $kh;
 }
 function update_khachhang($kh_id,$kh_ten,$kh_email,$kh_mk,$kh_dc,$kh_sdt,$kh_nt,$kh_quyen){ 
     $conn = pdo_get_connection();
