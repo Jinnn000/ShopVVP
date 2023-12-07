@@ -57,7 +57,7 @@
                 <button type="button" class="btn btn-outline-primary btn-sm" >chọn tất cả</button>
                 <button type="button" class="btn btn-outline-primary btn-sm">Bỏ chọn tất cả</button>
                 <button type="button" class="btn btn-outline-primary btn-sm">Xóa các mục đã chọn</button>
-                <a href="admin_index.php?act=khachhang" ><button type="button" class="btn btn-outline-primary btn-sm">Thêm mới</button></a>
+                <a href="admin_index.php?act=addkhachhang" ><button type="button" class="btn btn-outline-primary btn-sm">Thêm mới</button></a>
             
         </div>
         <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>

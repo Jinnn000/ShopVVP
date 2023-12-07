@@ -83,12 +83,12 @@ $listdm = load_danhmuc();
     <h1>Đăng nhập</h1>
     <form action="" method="post">
       <div class="txt_field">
-        <input type="text" name="email" required>
+        <input type="text" name="sdt" required>
         <span></span>
-        <label>Email</label>
+        <label>Số điện thoại</label>
       </div>
       <div class="txt_field">
-        <input type="password" name="mk" >
+        <input type="password" name="mk"required >
         <span></span>
         <label>Mật khẩu</label>
       </div>
@@ -103,14 +103,14 @@ $listdm = load_danhmuc();
   if (isset($_POST['dangnhap'])) {
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
           if (
-              isset($_POST['email']) && isset($_POST['mk'])
+              isset($_POST['sdt']) && isset($_POST['mk'])
           ) {
-              $email = $_POST['email'];
+              $sdt = $_POST['sdt'];
               $password = $_POST['mk'];
 
               
 
-              $check = get_khid($email);
+              $check = get_kh($sdt,$password);
 
               
               if (is_array($check)) {

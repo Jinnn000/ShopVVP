@@ -67,8 +67,8 @@ function load_khachang(){
     $list = pdo_query($sql);
     return $list;
 }
-function get_kh( $kh_email,$kh_mk ){
-    $sql="select * from khachhang where khachhang_email= '".$kh_email."' and khachhang_mk= '".$kh_mk."' ";
+function get_kh( $kh_sdt,$kh_mk ){
+    $sql="select * from khachhang where khachhang_sodt= '".$kh_sdt."' and khachhang_mk= '".$kh_mk."' ";
                 $kh= pdo_query_one($sql);
                 return $kh;
 }

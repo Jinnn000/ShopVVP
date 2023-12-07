@@ -61,7 +61,7 @@
                 extract($_SESSION['user']);
               
               ?>
-              <li class="nav-item" style="color: black; margin-left: 50px;" >Con chào bố <?=$user['khachhang_hoten']?></li>
+              <li class="nav-item nav-link" style="color: black; margin-left: 50px;" >Xin chào <?=$user['khachhang_hoten']?></li>
               <li class="nav-item" style="margin-top: 7px;">|</li>
               <li class="nav-item"><a href="index.php?logout=1" class="nav-link" style="color: black;">Đăng xuất</a></li>
               <?php } else {?>

@@ -7,7 +7,7 @@ if (!isset($_SESSION['mycart'])) {
 }
 
 //var_dump($_POST); // Kiểm tra giá trị của 'addtocart'
-
+//thêm vào giỏ hàng
 if (!empty($_POST['addtocart'])) {
     $id = $_POST['id'];
     $name = $_POST['name'];
@@ -29,6 +29,7 @@ if (!empty($_POST['addtocart'])) {
     // print_r($_SESSION['mycart']);
     // echo "</pre>";
 }
+//xóa sp
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove'])) {
     $index = intval($_POST['remove']);
 
@@ -41,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove'])) {
         exit();
     }
 }
+//đăng xuất
 if (isset($_GET['logout'])) {
     // Xóa toàn bộ session
     session_unset();
@@ -53,6 +55,15 @@ if (isset($_GET['logout'])) {
 if (isset($_SESSION['user']) && is_array($_SESSION['user'])) {
   // Truy cập vào khóa "user" nếu tồn tại
   $user = $_SESSION['user'];
+}
+//xóa tất cả sp
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['clear_all'])) {
+    // Xóa tất cả sản phẩm khỏi giỏ hàng
+    unset($_SESSION['mycart']);
+
+    // Làm mới trang để cập nhật giỏ hàng
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit();
 }
 ?>
 
@@ -184,13 +195,7 @@ if (isset($_SESSION['user']) && is_array($_SESSION['user'])) {
                         $i ++;
                     }
 
-                    echo '<pre>';
-
-                    var_dump($cart[3]);
-                    var_dump($tt);
-                    var_dump($formated);
-                    var_dump($img);
-                    echo '</pre>';
+                    
                     echo '<tr>
                 <td colspan=4>Tổng tiền</td>
                 <td >' . $tong . '</td>
@@ -198,6 +203,23 @@ if (isset($_SESSION['user']) && is_array($_SESSION['user'])) {
                     ?>
             </tbody>
         </table>
+        <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <form method="post">
+                <button class="btn btn-primary" type="submit" name="order">Đặt hàng</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form method="post">
+                <button class="btn btn-primary" type="submit" name="clear_all">Xóa tất cả</button>
+            </form>
+        </div>
+    </div>
+</div>
+        
+        
+        
 
     </div>
     <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
