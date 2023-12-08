@@ -69,6 +69,13 @@
               <li class="nav-item" style="margin-top: 7px;">|</li>
               <li class="nav-item"><a href="view/Register.php"  class="nav-link" style="color: black;">Đăng ký</a></li>
               <?php }?>
+              <li class="nav-item" style="margin-left: 100px ;">
+                <a class="nav-link btn btn-outline-primary" href="#" onclick="loadPage('khoban')"  style="color: black;">Khó bán nhất</a>
+              </li>
+              <li class="nav-item" style="margin-left: 100px ;">
+                <a  class="nav-link btn btn-outline-dark" href="#" onclick="loadPage('nhieunhat')"  style="color: black;">Nhiều nhất trong 1 tuần</a>
+              </li>
+
           </ul>         
         </div>
       </div>     
