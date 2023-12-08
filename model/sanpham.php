@@ -70,7 +70,7 @@ function load_newsanpham_home(){
     return $listsp;
 }
 function load_bestsell_home(){
-    $sql="select * from sanpham where 1 order by luotmua desc limit 0,12";
+    $sql="select * from sanpham where 1 order by luotmua desc limit 0,5";
     $listsp = pdo_query($sql);
     return $listsp;
 }
