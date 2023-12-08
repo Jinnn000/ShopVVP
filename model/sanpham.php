@@ -71,6 +71,7 @@ function load_newsanpham_home(){
 }
 function load_bestsell_home(){
     $sql="select * from sanpham where 1 order by luotmua desc limit 0,5";
+<<<<<<< HEAD
     $listsp = pdo_query($sql);
     return $listsp;
 }
@@ -81,6 +82,8 @@ function load_khoban_home(){
 }
 function load_best1tuan_home(){
     $sql="select * from sanpham where 1 order by luotmua desc limit 1";
+=======
+>>>>>>> e57b407eb15417caf35e33f23576da91b153608e
     $listsp = pdo_query($sql);
     return $listsp;
 }

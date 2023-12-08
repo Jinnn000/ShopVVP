@@ -78,7 +78,7 @@
           ?>
       </tbody>
     </table>
-    <button type="button" class="btn btn-outline-primary btn-sm">chọn tất cả</button>
+    <button type="button" class="btn btn-outline-primary btn-sm">Chọn tất cả</button>
     <button type="button" class="btn btn-outline-primary btn-sm">Bỏ chọn tất cả</button>
     <button type="button" class="btn btn-outline-primary btn-sm">Xóa các mục đã chọn</button>
     <a href="admin_index.php?act=addsp"><button type="button" class="btn btn-outline-primary btn-sm">Thêm mới</button></a>
